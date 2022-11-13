@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://admin-kaustubh:Kau@123$@cluster0.osnxala.mongodb.net/todolistDB", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://<admin>:<password>@cluster0.osnxala.mongodb.net/todolistDB", {useNewUrlParser: true});
 
 const itemsSchema = {
   name: String
@@ -139,4 +139,4 @@ app.listen(process.env.PORT||3000, function() {
   console.log("Server started on port 3000");
 });
 
-//https://serene-taiga-07645.herokuapp.com
+// https://serene-taiga-07645.herokuapp.com
